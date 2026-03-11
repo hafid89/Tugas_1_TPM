@@ -42,25 +42,19 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
         elevation: 0,
         foregroundColor: Colors.black,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
               "Penjumlahan & Pengurangan",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 5),
             Text(
               "Masukkan dua angka untuk dihitung",
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey.shade600,
-              ),
+              style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
             ),
             const SizedBox(height: 20),
             // Card form
@@ -160,10 +154,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
                 children: [
                   const Text(
                     "Hasil",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
+                    style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                   const SizedBox(height: 5),
                   Text(

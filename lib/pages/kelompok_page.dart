@@ -6,9 +6,13 @@ class KelompokPage extends StatelessWidget {
   // Data anggota kelompok sesuai gambar
   final List<Map<String, String>> anggota = const [
     {'nama': 'Hafid Dwi Saputra', 'nim': '123230051', 'role': 'Anggota'},
-    {'nama': 'Vincent', 'nim': '12323...', 'role': 'Ketua Kelompok'},
-    {'nama': 'Randra', 'nim': '12323..', 'role': 'Anggota'},
-    {'nama': 'mboh sopo', 'nim': '12323..', 'role': 'Anggota'},
+    {
+      'nama': 'Vincentius Erwan Wijaya',
+      'nim': '123230025',
+      'role': 'Ketua Kelompok',
+    },
+    {'nama': 'Randra Ferdian Saputra', 'nim': '123230014', 'role': 'Anggota'},
+    {'nama': 'Taura Kaka Arissa', 'nim': '123230217', 'role': 'Anggota'},
   ];
 
   @override
