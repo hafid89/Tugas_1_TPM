@@ -6,8 +6,10 @@ import 'bilangan_page.dart';
 import 'jumlah_field_page.dart';
 import 'stopwatch_page.dart';
 import 'piramid_page.dart';
-import '../widgets/menu_card.dart';
 import 'login_page.dart';
+import 'hari_weton_page.dart';
+import 'hitung_umur_page.dart';
+import 'hijriah_page.dart';
 
 class HomePage extends StatelessWidget {
   final String username;
@@ -67,6 +69,24 @@ class HomePage extends StatelessWidget {
         'icon': Icons.vignette_outlined,
         'color': const Color(0xFF34C759),
         'page': const PiramidPage(),
+      },
+      {
+        'title': 'Hari & Weton',
+        'icon': Icons.calendar_month_outlined,
+        'color': const Color(0xFF4C2C64),
+        'page': const HariWetonPage(),
+      },
+      {
+        'title': 'Hitung Umur',
+        'icon': Icons.hourglass_empty_rounded,
+        'color': const Color(0xFFAD64DD),
+        'page': const HitungUmurPage(),
+      },
+      {
+        'title': 'Konversi Hijriah',
+        'icon': Icons.mosque_outlined,
+        'color': const Color(0xFF5856D6),
+        'page': const HijriahPage(),
       },
     ];
 

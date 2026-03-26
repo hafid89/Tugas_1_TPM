@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/login_page.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id_ID', null);
   runApp(const MyApp());
 }
 
@@ -16,14 +19,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        // Menggunakan Inter sebagai font utama sesuai permintaan
         textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
-        // Menggunakan warna background dari referensi gambar (#f4f5f6)
-        scaffoldBackgroundColor: const Color(0xFFF4F5F6), 
+        scaffoldBackgroundColor: const Color(0xFFF4F5F6),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF4C2C64), // Deep Purple dari referensi
+          seedColor: const Color(0xFF4C2C64),
           primary: const Color(0xFF4C2C64),
-          secondary: const Color(0xFFAD64DD), // Accent Purple
+          secondary: const Color(0xFFAD64DD),
         ),
       ),
       home: const LoginPage(),

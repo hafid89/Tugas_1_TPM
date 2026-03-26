@@ -44,16 +44,23 @@ class _StopwatchPageState extends State<StopwatchPage> {
     });
   }
 
+  final Duration _initialTime = const Duration(
+    hours: 00,
+    minutes: 00,
+    seconds: 00,
+  );
+
   void _recordLap() {
     if (_stopwatch.isRunning) {
       setState(() {
-        laps.insert(0, _formatTime(_stopwatch.elapsedMilliseconds));
+        laps.insert(0, _formatTime(_stopwatch.elapsed + _initialTime));
       });
     }
   }
 
   // Format waktu yang lebih efisien
-  String _formatTime(int ms) {
+  String _formatTime(Duration duration) {
+    final int ms = duration.inMilliseconds;
     int hundreds = (ms / 10).truncate();
     int seconds = (hundreds / 100).truncate();
     int minutes = (seconds / 60).truncate();
@@ -165,7 +172,7 @@ class _StopwatchPageState extends State<StopwatchPage> {
                         ),
                         const SizedBox(height: 32),
                         Text(
-                          _formatTime(_stopwatch.elapsedMilliseconds),
+                          _formatTime(_stopwatch.elapsed + _initialTime),
                           style: GoogleFonts.inter(
                             fontSize: 48,
                             fontWeight: FontWeight.w900,
