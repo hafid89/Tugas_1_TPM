@@ -62,7 +62,7 @@ class _HitungUmurPageState extends State<HitungUmurPage> {
               onPressed: () => Navigator.pop(context),
             ),
             title: Text(
-              "Hari & Weton",
+              "Hitung Umur",
               style: GoogleFonts.inter(
                 fontWeight: FontWeight.w900,
                 letterSpacing: -1.5,
